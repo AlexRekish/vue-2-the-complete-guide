@@ -34,13 +34,15 @@ new Vue({
     },
     checkPlayerHP() {
       if (this.playerCurrentHP <= 0) {
+        this.playerCurrentHP = 0;
         alert('You lose :(');
         this.started = false;
       }
     },
     checkMonsterHP() {
       if (this.monsterCurrentHP <= 0) {
-        alert('You won!');
+        this.monsterCurrentHP = 0;
+        alert('You win!');
         this.started = false;
         return;
       }
